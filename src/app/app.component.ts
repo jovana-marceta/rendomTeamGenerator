@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'randomTeamGenerator';
+  // states
+  newMemberName: string = "";
+  members: string[] = [];
+
+  onInput(member: string){
+    this.newMemberName = member;
+    console.log(this.newMemberName);
+  }
+
+  addMember() {
+    this.members.push(this.newMemberName);
+    console.log(this.members);
+  }
 }
